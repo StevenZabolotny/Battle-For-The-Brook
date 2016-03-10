@@ -1,6 +1,15 @@
 <! DOCTYPE html>
 <html>
   <head>
+    <style>
+      .pure-menu {
+      display: inline-block;
+      background-color: 8AD3EB;
+      }
+      #form {
+      margin: 20px 20px 20px 20px;
+      }
+    </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <!-- Latest compiled and minified CSS -->
@@ -14,16 +23,49 @@
     <title>Battle for the Brook</title>
   </head>
   <body>
-    <h1>Battle for the Brook Team Registration</h1>
-    <p>This is the text that goes at the top of the registration.</p>
-    <newline>
-    <form class="pure-form pure-form-stacked">
-      <fieldset>
-	<legend>Team Captain Information</legend>
-	<p>The information below pertains to the team captain. Each team can have one captain. The captain is required to fill out this submission form containing additional contact information as well as information about the rest of the team.</p>
-	<label for="lname">First Name</label>
-	<input id="fname" type="text" placeholder="First Name">
-	<label for="lname">Last Name</label>
-	<input id="lname" type="text" placeholder="Last Name">
+    <h1><center>Battle for the Brook Team Registration</center></h1><br>
+    <div class="pure-g">
+      <div class="pure-menu pure-u-4-24">
+	<span class="pure-menu-heading">Battle for the Brook</span>
+	<ul class="pure-menu-list">
+	  <li class="pure-menu-item"><a href="/register" class="pure-menu-link">Register</a></li>
+	  <li class="pure-menu-item"><a href="/teams" class="pure-menu-link">Teams</a></li>
+	</ul>
+      </div>
+      <div class="pure-u-20-24">
+	<div id="form">
+	  <p>This is the text that goes at the top of the registration.</p>
+	  <newline>
+	    <form class="pure-form pure-form-stacked">
+	      <fieldset>
+		<legend>Team Captain Information</legend>
+		<p>The information below pertains to the team captain. Each team can have one captain. The captain is required to fill out this submission form containing additional contact information as well as information about the rest of the team.</p><br>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="lname">First Name</label>
+		    <input id="fname" type="text" placeholder="First Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="lname">Last Name</label>
+		    <input id="lname" type="text" placeholder="Last Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="id">Stony Brook ID Number</label>
+		    <input id="id" type="text" placeholder="9-Digit ID"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		  <label for="email">Email Address</label>
+		  <input id="email" type="email" placeholder="Email Address">
+		  </div>
+		</div>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="sname">Summoner Name</label>
+		    <input id="sname" type="text" placeholder="In-Game Name"><br>
+		  </div>
+	      </fieldset>
+	    </form>
+	  </div>
+      </div>
   </body>
 </html>
