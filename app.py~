@@ -10,7 +10,18 @@ def index():
 def register():
     if request.method == "GET":
         return render_template("register.html")
-    
+    text = ""
+    text += request.form["tname"] + "\n"
+    text += request.form["fname1"] + "," + request.form["lname1"] + "," + request.form["id1"] + "," + request.form["email1"] + "," + request.form["sname1"] + "," + request.form["tier1"] + "," + request.form["division1"] + "," + request.form["computer1"] + "\n"
+    for i in range(2,6):
+        text += request.form["fname" + str(i)] + "," + request.form["lname" + str(i)] + "," + request.form["id" + str(i)] + "," + request.form["sname" + str(i)] + "," + request.form["tier" + str(i)] + "," + request.form["division" + str(i)] + "," + request.form["computer" + str(i)] + "\n"
+    text += "\n"
+
+    fo = open("teams.txt", "a")
+    fo.write(text)
+    fo.close()
+
+    return render_template("register.html")
     
 if __name__=="__main__":
     app.debug=True

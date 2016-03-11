@@ -57,17 +57,23 @@ var subform = ['<legend>Substitute Player</legend>',
 	       '</label>',
 	       '</div>',
 	       '</div><br><br>'].join("");
+var subfalse = '<input type="hidden" name="subinuse" value="false" id="subinuse">';
+var subtrue = '<input type="hidden" name="subinuse" value="true" id="subinuse">';
 
 var subbutton = d3.select("#subbutton")
     .on("click", function() {
 	if (subuse) {
 	    sub.html("");
 	    subbutton.text("Add Substitute Player");
+	    d3.select("#subinusetag")
+		.html(subfalse);
 	    subuse = false;
 	}
 	else {
 	    sub.html(subform);
 	    subbutton.text("Remove Substitute Player");
+	    d3.select("#subinusetag")
+		.html(subtrue);
 	    subuse = true;
 	}
     });
