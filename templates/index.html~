@@ -1,6 +1,11 @@
 <! DOCTYPE html>
 <html>
   <head>
+    <style>
+      .custom-restricted-width {
+      display: inline-block;
+      }
+    </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <!-- Latest compiled and minified CSS -->
@@ -13,7 +18,13 @@
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <title>Battle for the Brook</title>
   </head>
-
-
+  <body>
+    <div class="pure-menu custom-restricted-width">
+      <span class="pure-menu-heading">Battle for the Brook</span>
+      <ul class="pure-menu-list">
+	<li class="pure-menu-item"><a href="/register" class="pure-menu-link">Register</a></li>
+	<li class="pure-menu-item"><a href="/teams" class="pure-menu-link">Teams</a></li>
+      </ul>
+    </div>
 </html>
 	

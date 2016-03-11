@@ -2,8 +2,19 @@
 <html>
   <head>
     <style>
-      .custom-restricted-width {
+      .pure-menu {
       display: inline-block;
+      background-color: F77E7C;
+      font-size: 125%;
+      }
+      #bg {
+      background-color: F28627;
+      }
+      #bodybg {
+      background-color: F7AC6A;
+      }
+      #bodytext {
+      margin: 20px 20px 20px 20px;
       }
     </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -18,13 +29,21 @@
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <title>Battle for the Brook</title>
   </head>
-  <body>
-    <div class="pure-menu custom-restricted-width">
-      <span class="pure-menu-heading">Battle for the Brook</span>
-      <ul class="pure-menu-list">
-	<li class="pure-menu-item"><a href="/register" class="pure-menu-link">Register</a></li>
-	<li class="pure-menu-item"><a href="/teams" class="pure-menu-link">Teams</a></li>
-      </ul>
+  <body id="bg">
+    <center><a href="/"><img src="http://puu.sh/nA3QR/87e871d39d.jpg"></a></center>
+    <div class="pure-g">
+      <div class="pure-menu pure-u-4-24">
+	<b>
+	<span class="pure-menu-heading"><a href="/" class="pure-menu-link">Battle for the Brook</a></span>
+	<ul class="pure-menu-list">
+	  <li class="pure-menu-item"><a href="/register" class="pure-menu-link">Register</a></li>
+	  <li class="pure-menu-item"><a href="/teams" class="pure-menu-link">Teams</a></li>
+	</ul>
+	</b>
+      </div>
+      <div class="pure-u-20-24" id="bodybg">
+	<p id="bodytext"> This is the official League of Legends at Stony Brook University Tournament Page. Click on Register to sign up your team. Click on Teams to view all Teams that have currently entered (this feature will be added shortly). Know anything about coding or web design? Think this website looks like shit and you can do better? Email me at steven.zabolotny@stonybrook.edu if you want to help out! </p>
+      </div>
     </div>
 </html>
 	

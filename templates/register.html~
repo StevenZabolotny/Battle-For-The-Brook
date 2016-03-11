@@ -4,10 +4,17 @@
     <style>
       .pure-menu {
       display: inline-block;
-      background-color: 8AD3EB;
+      background-color: F77E7C;
+      font-size: 125%;
       }
       #form {
       margin: 20px 20px 20px 20px;
+      }
+      #bg {
+      background-color: F28627;
+      }
+      #formbg {
+      background-color: F7AC6A;
       }
     </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -22,50 +29,341 @@
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <title>Battle for the Brook</title>
   </head>
-  <body>
-    <h1><center>Battle for the Brook Team Registration</center></h1><br>
+  <body id="bg">
+    <center><img src="http://puu.sh/nA3QR/87e871d39d.jpg"></center>
     <div class="pure-g">
       <div class="pure-menu pure-u-4-24">
+	<b>
 	<span class="pure-menu-heading">Battle for the Brook</span>
 	<ul class="pure-menu-list">
 	  <li class="pure-menu-item"><a href="/register" class="pure-menu-link">Register</a></li>
 	  <li class="pure-menu-item"><a href="/teams" class="pure-menu-link">Teams</a></li>
 	</ul>
+	</b>
       </div>
-      <div class="pure-u-20-24">
+      <div class="pure-u-20-24" id="formbg">
 	<div id="form">
-	  <p>This is the text that goes at the top of the registration.</p>
+	  <p>This is the team registration. Make sure that you have information pertaining to the entirety of your team prepared including: full names, summoner names, ranks, SBU IDs, and whether they use a desktop or a laptop.</p>
 	  <newline>
-	    <form class="pure-form pure-form-stacked">
+	    <form class="pure-form pure-form-stacked" method="POST">
 	      <fieldset>
-		<legend>Team Captain Information</legend>
-		<p>The information below pertains to the team captain. Each team can have one captain. The captain is required to fill out this submission form containing additional contact information as well as information about the rest of the team.</p><br>
+		<legend>Team Name</legend>
+		<p>Enter an appropriate team name that is not taken by any other teams.</p>
 		<div class="pure-g">
 		  <div class="pure-u-5-24">
-		    <label for="lname">First Name</label>
-		    <input id="fname" type="text" placeholder="First Name"><br>
+		    <label for="tname">Team Name</label>
+		    <input id="tname" type="text" name="tname" placeholder="Team Name"><br>
+		  </div>
+		</div><br><br>
+
+
+		
+		<legend>Player 1 (Team Captain)</legend>
+		<p>Each team can have one captain. The captain is required to fill out this submission form containing their email address as well as information about the rest of the team. Please put accurate information in the boxes below. Lying about rank isn't cool, because we can just double-check it, so save us some time and don't. In addition, please put a valid summoner name for each player, as they will only be allowed to participate using that summoner name. Also please put an email address that you will check often in case important information regarding the tournament is sent out.</p>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="fname1">First Name</label>
+		    <input id="fname1" type="text" name="fname1" placeholder="First Name"><br>
 		  </div>
 		  <div class="pure-u-5-24">
-		    <label for="lname">Last Name</label>
-		    <input id="lname" type="text" placeholder="Last Name"><br>
+		    <label for="lname1">Last Name</label>
+		    <input id="lname1" type="text" name="lname1" placeholder="Last Name"><br>
 		  </div>
 		  <div class="pure-u-5-24">
-		    <label for="id">Stony Brook ID Number</label>
-		    <input id="id" type="text" placeholder="9-Digit ID"><br>
+		    <label for="id1">Stony Brook ID Number</label>
+		    <input id="id1" type="text" name="id1" placeholder="9-Digit ID"><br>
 		  </div>
 		  <div class="pure-u-5-24">
-		  <label for="email">Email Address</label>
-		  <input id="email" type="email" placeholder="Email Address">
+		  <label for="email1">Email Address</label>
+		  <input id="email1" type="email" name="email1" placeholder="Email Address">
 		  </div>
 		</div>
 		<div class="pure-g">
 		  <div class="pure-u-5-24">
-		    <label for="sname">Summoner Name</label>
-		    <input id="sname" type="text" placeholder="In-Game Name"><br>
+		    <label for="sname1">Summoner Name</label>
+		    <input id="sname1" type="text" name="sname1" placeholder="In-Game Name"><br>
 		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="tier1">Rank Tier</label>
+		    <select id="tier1" name="tier1" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>Bronze</option>
+		      <option>Silver</option>
+		      <option>Gold</option>
+		      <option>Platinum</option>
+		      <option>Diamond</option>
+		      <option>Master</option>
+		      <option>Challenger</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="division1">Rank Division</label>
+		    <select id="division1" name="division1" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>I</option>
+		      <option>II</option>
+		      <option>III</option>
+		      <option>IV</option>
+		      <option>V</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="desktop1">
+		      <input id="computer1" type="radio" name="computer1" value="desktop" checked>
+		      Desktop
+		    </label>
+		    <label for="laptop1">
+		      <input id="computer1" type="radio" name="computer1" value="laptop">
+		      Laptop
+		    </label>
+		  </div>
+		</div><br><br>
+
+
+		
+		<legend>Player 2</legend>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="fname2">First Name</label>
+		    <input id="fname2" type="text" name="fname2" placeholder="First Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="lname2">Last Name</label>
+		    <input id="lname2" type="text" name="lname2" placeholder="Last Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="id2">Stony Brook ID Number</label>
+		    <input id="id2" type="text" name="id2" placeholder="9-Digit ID"><br>
+		  </div>
+		</div>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="sname2">Summoner Name</label>
+		    <input id="sname2" type="text" name="sname2" placeholder="In-Game Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="tier2">Rank Tier</label>
+		    <select id="tier2" name="tier2" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>Bronze</option>
+		      <option>Silver</option>
+		      <option>Gold</option>
+		      <option>Platinum</option>
+		      <option>Diamond</option>
+		      <option>Master</option>
+		      <option>Challenger</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="division2">Rank Division</label>
+		    <select id="division2" name="division2" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>I</option>
+		      <option>II</option>
+		      <option>III</option>
+		      <option>IV</option>
+		      <option>V</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="desktop2">
+		      <input id="desktop2" type="radio" name="computer2" value="desktop" checked>
+		      Desktop
+		    </label>
+		    <label for="laptop2">
+		      <input id="laptop2" type="radio" name="computer2" value="laptop">
+		      Laptop
+		    </label>
+		  </div>
+		</div><br><br>
+
+
+		
+		<legend>Player 3</legend>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="fname3">First Name</label>
+		    <input id="fname3" type="text" name="fname3"  placeholder="First Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="lname3">Last Name</label>
+		    <input id="lname3" type="text" name="lname3" placeholder="Last Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="id3">Stony Brook ID Number</label>
+		    <input id="id3" type="text" name="id3" placeholder="9-Digit ID"><br>
+		  </div>
+		</div>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="sname3">Summoner Name</label>
+		    <input id="sname3" type="text" name="sname3" placeholder="In-Game Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="tier3">Rank Tier</label>
+		    <select id="tier3" name="tier3" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>Bronze</option>
+		      <option>Silver</option>
+		      <option>Gold</option>
+		      <option>Platinum</option>
+		      <option>Diamond</option>
+		      <option>Master</option>
+		      <option>Challenger</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="division3">Rank Division</label>
+		    <select id="division3" name="division3" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>I</option>
+		      <option>II</option>
+		      <option>III</option>
+		      <option>IV</option>
+		      <option>V</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="desktop3">
+		      <input id="desktop3" type="radio" name="computer3" value="desktop" checked>
+		      Desktop
+		    </label>
+		    <label for="laptop3">
+		      <input id="laptop3" type="radio" name="computer3" value="laptop">
+		      Laptop
+		    </label>
+		  </div>
+		</div><br><br>
+
+		
+		  
+		<legend>Player 4</legend>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="fname4">First Name</label>
+		    <input id="fname4" type="text" name="fname4" placeholder="First Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="lname4">Last Name</label>
+		    <input id="lname4" type="text" name="lname4" placeholder="Last Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="id4">Stony Brook ID Number</label>
+		    <input id="id4" type="text" name="id4" placeholder="9-Digit ID"><br>
+		  </div>
+		</div>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="sname4">Summoner Name</label>
+		    <input id="sname4" type="text" name="sname4" placeholder="In-Game Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="tier4">Rank Tier</label>
+		    <select id="tier4" name="tier4" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>Bronze</option>
+		      <option>Silver</option>
+		      <option>Gold</option>
+		      <option>Platinum</option>
+		      <option>Diamond</option>
+		      <option>Master</option>
+		      <option>Challenger</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="division4">Rank Division</label>
+		    <select id="division4" name="division4" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>I</option>
+		      <option>II</option>
+		      <option>III</option>
+		      <option>IV</option>
+		      <option>V</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="desktop4">
+		      <input id="desktop4" type="radio" name="computer4" value="desktop" checked>
+		      Desktop
+		    </label>
+		    <label for="laptop4">
+		      <input id="laptop4" type="radio" name="computer4" value="laptop">
+		      Laptop
+		    </label>
+		  </div>
+		</div><br><br>
+
+
+		
+		<legend>Player 5</legend>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="fname5">First Name</label>
+		    <input id="fname5" type="text" name="fname5" placeholder="First Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="lname5">Last Name</label>
+		    <input id="lname5" type="text" name="lname5" placeholder="Last Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="id5">Stony Brook ID Number</label>
+		    <input id="id5" type="text" name="id5" placeholder="9-Digit ID"><br>
+		  </div>
+		</div>
+		<div class="pure-g">
+		  <div class="pure-u-5-24">
+		    <label for="sname5">Summoner Name</label>
+		    <input id="sname5" type="text" name="sname5" placeholder="In-Game Name"><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="tier5">Rank Tier</label>
+		    <select id="tier5" name="tier5" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>Bronze</option>
+		      <option>Silver</option>
+		      <option>Gold</option>
+		      <option>Platinum</option>
+		      <option>Diamond</option>
+		      <option>Master</option>
+		      <option>Challenger</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="division5">Rank Division</label>
+		    <select id="division5" name="division5" class="pure-input-1-2">
+		      <option>Unranked</option>
+		      <option>I</option>
+		      <option>II</option>
+		      <option>III</option>
+		      <option>IV</option>
+		      <option>V</option>
+		    </select><br>
+		  </div>
+		  <div class="pure-u-5-24">
+		    <label for="desktop5">
+		      <input id="desktop5" type="radio" name="computer5" value="desktop" checked>
+		      Desktop
+		    </label>
+		    <label for="laptop5">
+		      <input id="laptop5" type="radio" name="computer5" value="laptop">
+		      Laptop
+		    </label>
+		  </div>
+		</div><br><br>
+		<div class="pure-g">
+		  <button type="button" class="pure-button" id="subbutton">Add Substitute Player</button>
+		</div>
+		<div id="sub">
+		</div>
+		</div>
 	      </fieldset>
+	      <center>
+	      Make sure all information is correctly filled out before hitting submit.<br><br>
+	      <button type="submit" class="pure-button">Submit</button>
+	      </center><br>
 	    </form>
 	  </div>
       </div>
+  <script src="static/register.js"></script>
   </body>
 </html>
